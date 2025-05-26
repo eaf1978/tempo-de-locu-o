@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.escuro {
+  background: linear-gradient(to right, #1c1c1c, #333);
+  color: #f0f0f0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+textarea, 
+input[type="number"], 
+select, 
+input[type="range"] {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+body.escuro textarea,
+body.escuro input[type="number"],
+body.escuro select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 8px;
+  background: #ddd;
+  padding: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff6b6b;
+  cursor: pointer;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.8rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: #ff4757;
+  transform: translateY(-2px);
+}
+
+.resultado, #palavrasContadas {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#progressBar {
+  width: 100%;
+  background: #555;
+  border-radius: 10px;
+  margin-top: 1rem;
+  height: 20px;
+  overflow: hidden;
+}
+
+#progressFill {
+  width: 0%;
+  height: 100%;
+  background: #00ff9f;
+  transition: width 0.4s ease;
+}
+
+.exportar {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.exportar button {
+  flex: 1;
+}
+
+.toggle-tema {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.toggle-tema button {
+  background-color: #4a5568;
+  padding: 0.5rem 1rem;
+}
+
+.btn-limpar {
+  background-color: #bdc3c7;
+  color: black;
+}
+
+.btn-limpar:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.escuro footer {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#velocidadeValue {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}

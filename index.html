@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tempo de Locução</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Tempo de Locução</h1>
+    
+    <label for="texto">Texto para locução:</label>
+    <textarea id="texto" placeholder="Digite ou cole o texto da locução aqui..." oninput="atualizarContagem()"></textarea>
+    
+    <label for="velocidade">Velocidade da fala (palavras por minuto):</label>
+    <input type="number" id="velocidade" value="150" min="80" max="250" onchange="calcularTempo()" />
+    
+    <label for="voz">Voz de síntese:</label>
+    <select id="voz"></select>
+    
+    <label for="falaVelocidade">Velocidade da leitura: <span id="velocidadeValue">1</span>x</label>
+    <input type="range" id="falaVelocidade" min="0.5" max="2" step="0.1" value="1" oninput="document.getElementById('velocidadeValue').textContent = this.value" />
+    
+    <div class="botoes">
+      <button onclick="calcularTempo()">Calcular Tempo</button>
+      <button onclick="lerTexto()">▶️ Ler</button>
+      <button onclick="pausarLeitura()">⏸️ Pausar</button>
+      <button onclick="pararLeitura()">⏹️ Parar</button>
+    </div>
+    
+    <div id="palavrasContadas">Palavras: 0</div>
+    <div class="resultado" id="resultado"></div>
+    <div id="progressBar"><div id="progressFill"></div></div>
+    
+    <div class="exportar">
+      <button onclick="exportarTexto()">💾 Exportar texto (.txt)</button>
+      <button class="btn-limpar" onclick="limparCampos()">🧹 Limpar</button>
+    </div>
+    
+    <div class="toggle-tema">
+      <button id="temaToggle" onclick="alternarTema()">🌙 Modo Escuro</button>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© Eunice de Faria. Todos os direitos reservados.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
